@@ -1,12 +1,4 @@
-    post {
-        always {
-            def sendEmail(currentBuild.currentResult,"devopsmanoj1909@gmail.com")
-            cleanWs()
-        }    
-    }
-
-
-def sendEmail(String buildStatus,String recipient) {   
+def call(String buildStatus,String recipient) {   
    def subject = "${buildStatus}: Job ${env.JOB_NAME} - ${env.BUILD_NUMBER}"
    def body = """<html>
                  <head>
