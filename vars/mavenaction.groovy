@@ -1,4 +1,4 @@
-def call(string mavengoal){
+def call(String mavengoal){
             
                     sh " mvn clean ${mavengoal} "
                 
