@@ -1,6 +1,6 @@
     post {
         always {
-            sendEmail(currentBuild.currentResult,"devopsmanoj1909@gmail.com")
+            def sendEmail(currentBuild.currentResult,"devopsmanoj1909@gmail.com")
             cleanWs()
         }    
     }
