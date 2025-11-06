@@ -1,4 +1,5 @@
 // vars/getBranchName.groovy
-def call() {
-    return sh(script: "git rev-parse --abbrev-ref HEAD", returnStdout: true).trim()
+def call(branchName) {
+    sh(script: "git name-rev --name-only HEAD", returnStdout: true).trim()
+    echo "Branch name is: ${branchName}"
 }
